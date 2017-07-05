@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: <%= ENV["DATABASE_USERNAME"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: lkh-blog_development
+
+test:
+  <<: *default
+  database: lkh-blog_test
+
+production:
+  <<: *default
+  database: lkh-blog_production
+  username: lkh-blog
+  password: <%= ENV['LKH-BLOG_DATABASE_PASSWORD'] %>

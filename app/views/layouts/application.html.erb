@@ -9,7 +9,12 @@
   </head>
 
   <body>
-    <h5><%= link_to "Home", root_path %></h5>
-    <%= yield %>
+    <%= render "layouts/navigation" %>
+    <div id="flash_message" class="flash-message">
+      <%= render "layouts/flash_message" %>
+    </div>
+    <div class="main-contain container-fluid">
+      <%= yield %>
+    </div>
   </body>
 </html>

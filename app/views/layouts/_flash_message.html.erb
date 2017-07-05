@@ -1,0 +1,16 @@
+<!-- <div class="flash_message">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+</div> -->
+<% if flash.alert %>
+  <div class="alert alert-danger alert-dismissible" role="alert" style="overflow:hidden">
+    <%= simple_format flash.alert, style: "float: left" %>
+    <i class="fa fa-times close" data-dismiss="alert" aria-label="close"></i>
+  </div>
+<% end %>
+<% if flash.notice %>
+  <div class="alert alert-info alert-dismissible" role="alert" style="overflow:hidden">
+    <%= simple_format flash.notice, style: "float: left" %>
+    <i class="fa fa-times close" data-dismiss="alert" aria-label="close"></i>
+  </div>
+<% end %>

@@ -13,6 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
 //= require bootstrap-sprockets
 //= require ckeditor/init
+
+$(document).on("turbolinks:load", function() {
+  setTimeout(function(){
+    $("#flash_message").hide();
+  }, 3000)
+});

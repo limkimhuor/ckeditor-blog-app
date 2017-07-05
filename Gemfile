@@ -61,6 +61,7 @@ group :development, :test do
   gem "debugger2", git: "git://github.com/ko1/debugger2.git"
   gem "factory_girl_rails"
   gem "ffaker"
+  gem "pry"
 end
 
 group :production do
@@ -75,4 +76,6 @@ end
 gem "dotenv-rails"
 gem "simple_form", "~> 3.2"
 gem "bootstrap-sass", "~> 3.3"
-gem "ckeditor", "~> 4.1"
+gem "carrierwave", "~> 1.0"
+gem "mini_magick"
+gem "ckeditor", "~> 4.2"
